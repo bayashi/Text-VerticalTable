@@ -1,14 +1,17 @@
 requires 'perl', '5.008005';
 requires 'strict';
 requires 'warnings';
+requires 'utf8';
+requires 'overload';
 requires 'Carp';
+requires 'List::Util';
 
 on 'test' => sub {
     requires 'Test::More', '0.88';
 };
 
 on 'configure' => sub {
-    requires 'Module::Build' , '0.40';
+    requires 'Module::Build';
     requires 'Module::Build::Pluggable';
     requires 'Module::Build::Pluggable::CPANfile';
 };
